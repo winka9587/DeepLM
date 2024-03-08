@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
+set(CMAKE_C_COMPILER "/usr/local/bin/gcc")
+set(CMAKE_CXX_COMPILER "/usr/local/bin/g++")
 project(TorchBA LANGUAGES CXX)
 find_package(OpenMP REQUIRED)
 
@@ -13,7 +15,7 @@ SET(OPENMP_LIB OpenMP::OpenMP_CXX)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pthread -fPIC")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
